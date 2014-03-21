@@ -1,0 +1,22 @@
+<ns1:TransformResponse xmlns:ns1="http://service.skytv.co.nz/puborch-transform/v1">
+  <rss version="2.0" xmlns:sky="http://xml.theplatform.com/media/data/sky">
+    <channel>
+      <item>
+        <title>Star Trek</title>
+        <description>A chronicle of the early days of James T. Kirk and his fellow USS Enterprise crew members.</description>
+        <sky:skyID>EP-07272011</sky:skyID>
+        <sky:contentProviderID>666</sky:contentProviderID>
+        <sky:contractID>123456789</sky:contractID>
+        <sky:programCredit>Chris Pine</sky:programCredit>
+        <sky:studio>Paramount Pictures</sky:studio>
+        <sky:contentClassification>Test Classification</sky:contentClassification>
+        <sky:contentDuration>30</sky:contentDuration>
+        <sky:catalogType>Movies</sky:catalogType>
+        <sky:shortSynopsis>In the year 2233 the starship USS Kelvin investigates a lightning storm in space, which the crew soon realizes is a black hole. A massive vessel, the Narada, emerges, creating an alternate timeline. The Narada opens fire on the Kelvin, inflicting heavy damage.</sky:shortSynopsis>
+        <sky:releaseYear>2009</sky:releaseYear>
+        <sky:episodeNumber></sky:episodeNumber>
+        <sky:state>active</sky:state>
+      </item>
+    </channel>
+  </rss>
+</ns1:TransformResponse>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ns1:TransformRequest xmlns:ns1="http://service.skytv.co.nz/puborch-transform/v1" xmlns:ns2="http://model.skytv.co.nz/vod/v1">
+  <fromType>SKY</fromType>
+  <toType>MPXSTUB</toType>
+  <source>
+    <ns2:Title>
+      <ns2:titleId>1234</ns2:titleId>
+      <ns2:name>Buffy The Vampire Slayer</ns2:name>
+      <ns2:synopsis>Buffy and the Scooby Gang fight vampires</ns2:synopsis>
+      <ns2:seriesName>Buffy</ns2:seriesName>
+      <ns2:seriesNumber>1</ns2:seriesNumber>
+      <ns2:episodeNumber>1</ns2:episodeNumber>
+      <ns2:cast>
+        <ns2:castId>24</ns2:castId>
+        <ns2:roleId>3</ns2:roleId>
+        <ns2:roleName>Actor</ns2:roleName>
+        <ns2:firstName>Bob</ns2:firstName>
+        <ns2:lastName>Down</ns2:lastName>
+      </ns2:cast>
+      <ns2:cast>
+        <ns2:castId>25</ns2:castId>
+        <ns2:roleId>3</ns2:roleId>
+        <ns2:roleName>Actor</ns2:roleName>
+        <ns2:firstName>Sarah</ns2:firstName>
+        <ns2:lastName>Michell-Gellaher</ns2:lastName>
+      </ns2:cast>
+      <ns2:distributor>FOX</ns2:distributor>
+      <ns2:contentProviderId>789</ns2:contentProviderId>
+      <ns2:yearOfProduction>1995</ns2:yearOfProduction>
+      <ns2:type>Series</ns2:type>
+      <ns2:state>0</ns2:state>
+    </ns2:Title>
+  </source>
+</ns1:TransformRequest>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd"
+	xmlns:ftl="http://www.milyn.org/xsd/smooks/freemarker-1.1.xsd">
+	<params>
+		<param name="inputType">input.xml</param>
+		<param name="stream.filter.type">SAX</param>
+		<param name="input.xml" type="input.type.actived">File://home/david/workspace/pizzashack_workspace/xml_project/mpx-request.xml
+		</param>
+	</params>
+	<ftl:freemarker applyOnElement="#document">
+		<ftl:template><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<ns1:TransformResponse xmlns:ns1="http://service.skytv.co.nz/puborch-transform/v1">
+    <rss>
+        <channel>
+            <item>
+                <title>${.vars["TransformRequest"]["source/Title/titleId"]}</title>                
+                <sky:seriesId xmlns:sky="http://xml.theplatform.com/media/data/sky">${.vars["TransformRequest"]["source/Title/seriesNumber"]}</sky:seriesId>                
+            </item>            
+        </channel>        
+    </rss>    
+</ns1:TransformResponse>]]></ftl:template>
+		<param name="modelSrc">File://home/david/workspace/pizzashack_workspace/xml_project/mpx-response.xml
+		</param>
+		<param name="modelSrcType">XML</param>
+		<param name="messageType">XML</param>
+		<param name="templateDataProvider">input</param>
+	</ftl:freemarker>
+	<resource-config selector="#document">
+		<resource>org.milyn.delivery.DomModelCreator</resource>
+	</resource-config>
+</smooks-resource-list>

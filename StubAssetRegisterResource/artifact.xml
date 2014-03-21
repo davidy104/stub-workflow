@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="StubMpxTransformSmooksResource" groupId="co.nz.skytv.StubAssetRegisterResource.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>StubMpxTransformSmooksResource.xml</file>
+            <path>/_system/governance/smooks</path>
+            <mediaType>application/vnd+wso2.smooks</mediaType>
+        </item>
+    </artifact>
+</artifacts>

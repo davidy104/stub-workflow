@@ -1,0 +1,9 @@
+<data name="StubIBMSService" serviceNamespace="" serviceGroup="">
+    <description/>
+    <config id="default">
+        <property name="org.wso2.ws.dataservice.user">sa</property>
+        <property name="org.wso2.ws.dataservice.password">123456</property>
+        <property name="org.wso2.ws.dataservice.protocol">jdbc:h2:tcp://localhost/~/ibms-test</property>
+        <property name="org.wso2.ws.dataservice.driver">org.h2.Driver</property>
+    </config>
+</data>
