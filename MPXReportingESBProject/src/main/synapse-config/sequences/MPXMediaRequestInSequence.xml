@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="MPXMediaRequestInSequence">
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-media-request-service/v1" name="uri.var.token" expression="//in:MediaInRequest/token" scope="default" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-media-request-service/v1" name="uri.var.csv" expression="//in:MediaInRequest/csv" scope="default" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-media-request-service/v1" name="uri.var.schema" expression="//in:MediaInRequest/schema" scope="default" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-media-request-service/v1" name="uri.var.rangeStart" expression="//in:MediaInRequest/rangeStart" scope="default" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-media-request-service/v1" name="uri.var.rangeEnd" expression="//in:MediaInRequest/rangeEnd" scope="default" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" name="datePart" expression="get-property('SYSTEM_DATE', 'yyyy-MM-dd')" scope="default" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" name="timePart" expression="get-property('SYSTEM_DATE', 'hh:mm:ss')" scope="default" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" name="sysdate" expression="fn:concat(get-property('datePart'), 'T' ,get-property('timePart'), '.000Z')" scope="default" type="STRING"/>
+    <script language="js">var date = new Date();     date.setDate(date.getDate()-1);     var formattedTime = date.getFullYear() + '-' + ("0" + (date.getMonth()+1)).slice(-2) + '-' + ("0" + date.getDate()).slice(-2);      mc.setProperty("startDate",formattedTime);</script>
+    <switch xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-media-request-service/v1" source="//in:MediaInRequest/endTimestamp">
+        <case regex="^$">
+            <property name="uri.var.endTimestamp" expression="get-property('sysdate')" scope="default" type="STRING"/>
+            <property name="uri.var.startTimestamp" expression="fn:concat(get-property('startDate'), 'T00:00:00.000Z')" scope="default" type="STRING"/>
+        </case>
+        <case regex="^.*endTimestamp.*$">
+            <property name="uri.var.endTimestamp" expression="get-property('sysdate')" scope="default" type="STRING"/>
+            <property name="uri.var.startTimestamp" expression="fn:concat(get-property('startDate'), 'T00:00:00.000Z')" scope="default" type="STRING"/>
+        </case>
+        <default>
+            <property name="uri.var.endTimestamp" expression="//in:MediaInRequest/endTimestamp" scope="default" type="STRING"/>
+            <property name="uri.var.startTimestamp" expression="//in:MediaInRequest/startTimestamp" scope="default" type="STRING"/>
+        </default>
+    </switch>
+    <property name="HTTP_METHOD" value="GET" scope="axis2" type="STRING"/>
+    <send>
+        <endpoint key="MPXMediaRequestReSTEndpoint"/>
+    </send>
+</sequence>

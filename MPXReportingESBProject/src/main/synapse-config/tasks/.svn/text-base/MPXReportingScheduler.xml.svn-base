@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task xmlns="http://ws.apache.org/ns/synapse" name="MPXReportingScheduler" class="org.apache.synapse.startup.tasks.MessageInjector" group="synapse.simple.quartz">
+    <trigger cron="0 0 6 * * ?"/>
+    <property xmlns:task="http://www.wso2.org/products/wso2commons/tasks" name="soapAction" value="http://service.skytv.co.nz/bps/mpx-reporting/initiate"/>
+    <property xmlns:task="http://www.wso2.org/products/wso2commons/tasks" name="format" value="soap11"/>
+    <property xmlns:task="http://www.wso2.org/products/wso2commons/tasks" name="to" value="https://bps.prelive.skytv.co.nz:8243/services/MPXReportingBPSProject"/>
+    <property xmlns:task="http://www.wso2.org/products/wso2commons/tasks" name="message">
+        <p:MPXReportingBPSProjectRequest xmlns:p="http://service.skytv.co.nz/bps/mpx-reporting">
+            <username xmlns="http://service.skytv.co.nz/bps/mpx-reporting">SkyPreProdSoaAdmin@theplatform.com</username>
+            <password xmlns="http://service.skytv.co.nz/bps/mpx-reporting">R?w67C!kq</password>
+        </p:MPXReportingBPSProjectRequest>
+    </property>
+</task>

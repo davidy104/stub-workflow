@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_-6vt0F1cEeOYyOElMlPKCA" type="Esb" name="endpoint_MPXAuthHTTPEndpoint.esb_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_-89UUF1cEeOYyOElMlPKCA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_-89UVV1cEeOYyOElMlPKCA" type="7001"/>
+    <children xmi:type="notation:Shape" xmi:id="_-_AiwF1cEeOYyOElMlPKCA" type="3642" fontName="Ubuntu">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_-_Aiwl1cEeOYyOElMlPKCA" type="7041">
+        <children xmi:type="notation:Node" xmi:id="_-_K60F1cEeOYyOElMlPKCA" type="3646">
+          <children xmi:type="notation:DecorationNode" xmi:id="_-_Lh4F1cEeOYyOElMlPKCA" type="5161"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_-_K60V1cEeOYyOElMlPKCA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-_K60l1cEeOYyOElMlPKCA" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_-_K6011cEeOYyOElMlPKCA"/>
+          <element xmi:type="esb:AddressEndPoint" href="endpoint_MPXAuthHTTPEndpoint.esb#//@server/@children.0/@child"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-_K61F1cEeOYyOElMlPKCA" width="75" height="55"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_-_Aiw11cEeOYyOElMlPKCA" showTitle="true"/>
+      </children>
+      <element xmi:type="esb:EndpointDiagram" href="endpoint_MPXAuthHTTPEndpoint.esb#//@server/@children.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-_AiwV1cEeOYyOElMlPKCA" width="110" height="80"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_-89UUV1cEeOYyOElMlPKCA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_-89UUl1cEeOYyOElMlPKCA" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_-89UU11cEeOYyOElMlPKCA"/>
+    <element xmi:type="esb:EsbServer" href="endpoint_MPXAuthHTTPEndpoint.esb#//@server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-89UVF1cEeOYyOElMlPKCA"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_-6vt0V1cEeOYyOElMlPKCA"/>
+  <element xmi:type="esb:EsbDiagram" href="endpoint_MPXAuthHTTPEndpoint.esb#/"/>
+</notation:Diagram>

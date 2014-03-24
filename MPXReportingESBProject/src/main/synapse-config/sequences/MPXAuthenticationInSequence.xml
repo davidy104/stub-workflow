@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="MPXAuthenticationInSequence">
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-authentication-service/v1" name="uri.var.username" expression="//in:SignInRequest/username" scope="default" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-authentication-service/v1" name="uri.var.password" expression="//in:SignInRequest/password" scope="default" type="STRING"/>
+    <send>
+        <endpoint key="MPXAuthHTTPEndpoint"/>
+    </send>
+</sequence>

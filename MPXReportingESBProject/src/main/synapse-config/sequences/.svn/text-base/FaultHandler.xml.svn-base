@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="FaultHandler">
+    <header name="To" action="remove"/>
+    <property name="RESPONSE" value="true" scope="default" type="STRING"/>
+    <property name="NO_ENTITY_BODY" scope="axis2" action="remove"/>
+    <log level="custom">
+        <property xmlns:ns="http://org.apache.synapse/xsd" name="error-message" expression="get-property('ERROR_MESSAGE')"/>
+        <property xmlns:ns="http://org.apache.synapse/xsd" name="error-code" expression="get-property('ERROR_CODE')"/>
+        <property xmlns:ns="http://org.apache.synapse/xsd" name="error-detail" expression="get-property('ERROR_DETAIL')"/>
+        <property xmlns:ns="http://org.apache.synapse/xsd" name="error-exception" expression="get-property('ERROR_EXCEPTION')"/>
+    </log>
+    <makefault version="soap11">
+        <code xmlns:soap11Env="http://schemas.xmlsoap.org/soap/envelope/" value="soap11Env:VersionMismatch"/>
+        <reason value="Service / Endpoint is either down or currently not reachable."/>
+        <role/>
+        <detail/>
+    </makefault>
+    <send/>
+</sequence>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esb:EsbDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb">
+  <server type="TASK">
+    <children xsi:type="esb:Task" taskName="MPXReportingScheduler" triggerType="Cron" cron="0 0 6 * * ?">
+      <taskProperties propertyName="message" propertyValue="&lt;p:MPXReportingBPSProjectRequest xmlns:p=&quot;http://service.skytv.co.nz/bps/mpx-reporting&quot;>&#xA;            &lt;username xmlns=&quot;http://service.skytv.co.nz/bps/mpx-reporting&quot;>SkyPreProdSoaAdmin@theplatform.com&lt;/username>&#xA;            &lt;password xmlns=&quot;http://service.skytv.co.nz/bps/mpx-reporting&quot;>R?w67C!kq&lt;/password>&#xA;        &lt;/p:MPXReportingBPSProjectRequest>" propertyType="XML"/>
+      <taskProperties propertyName="to" propertyValue="https://bps.prelive.skytv.co.nz:8243/services/MPXReportingBPSProject"/>
+      <taskProperties propertyName="format" propertyValue="soap11"/>
+      <taskProperties propertyName="soapAction" propertyValue="http://service.skytv.co.nz/bps/mpx-reporting/initiate"/>
+    </children>
+  </server>
+</esb:EsbDiagram>

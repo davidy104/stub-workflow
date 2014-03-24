@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esb:EsbDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb">
+  <server type="SEQUENCE">
+    <children xsi:type="esb:Sequences" name="MPXMediaRequestInSequence">
+      <outputConnector>
+        <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.0/@inputConnector"/>
+      </outputConnector>
+      <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.11/@OutputConnector/@outgoingLink"/>
+      <mediatorFlow>
+        <children xsi:type="esb:PropertyMediator" propertyName="uri.var.token" valueType="EXPRESSION">
+          <inputConnector incomingLinks="//@server/@children.0/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.1/@inputConnector"/>
+          </outputConnector>
+          <valueExpression propertyValue="//in:MediaInRequest/token" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+        </children>
+        <children xsi:type="esb:PropertyMediator" propertyName="uri.var.csv" valueType="EXPRESSION">
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.0/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.2/@inputConnector"/>
+          </outputConnector>
+          <valueExpression propertyValue="//in:MediaInRequest/csv" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+        </children>
+        <children xsi:type="esb:PropertyMediator" propertyName="uri.var.schema" valueType="EXPRESSION">
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.1/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.3/@inputConnector"/>
+          </outputConnector>
+          <valueExpression propertyValue="//in:MediaInRequest/schema" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+        </children>
+        <children xsi:type="esb:PropertyMediator" propertyName="uri.var.rangeStart" valueType="EXPRESSION">
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.2/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.4/@inputConnector"/>
+          </outputConnector>
+          <valueExpression propertyValue="//in:MediaInRequest/rangeStart" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+        </children>
+        <children xsi:type="esb:PropertyMediator" propertyName="uri.var.rangeEnd" valueType="EXPRESSION">
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.3/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.5/@inputConnector"/>
+          </outputConnector>
+          <valueExpression propertyValue="//in:MediaInRequest/rangeEnd" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+        </children>
+        <children xsi:type="esb:PropertyMediator" propertyName="datePart" valueType="EXPRESSION">
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.4/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.6/@inputConnector"/>
+          </outputConnector>
+          <valueExpression propertyValue="get-property('SYSTEM_DATE', 'YYYY-MM-dd')" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000000770800000001000000017400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F78736478"/>
+        </children>
+        <children xsi:type="esb:PropertyMediator" propertyName="timePart" valueType="EXPRESSION">
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.5/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.7/@inputConnector"/>
+          </outputConnector>
+          <valueExpression propertyValue="get-property('SYSTEM_DATE', 'hh:mm:ss')" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000000770800000001000000017400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F78736478"/>
+        </children>
+        <children xsi:type="esb:PropertyMediator" propertyName="sysdate" valueType="EXPRESSION">
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.6/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.8/@inputConnector"/>
+          </outputConnector>
+          <valueExpression propertyValue="fn:concat(get-property('datePart'), 'T' ,get-property('timePart'), '.000Z')" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000000770800000001000000017400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F78736478"/>
+        </children>
+        <children xsi:type="esb:ScriptMediator" scriptType="INLINE" scriptBody="&#xA;      var date = new Date();     date.setDate(date.getDate()-1);     var formattedTime = date.getFullYear() + '-' + (&quot;0&quot; + (date.getMonth()+1)).slice(-2) + '-' + (&quot;0&quot; + date.getDate()).slice(-2);      mc.setProperty(&quot;startDate&quot;,formattedTime);">
+          <scriptDynamicKey prettyName="" propertyName="dynamic key" propertyValue="/xpath/expression" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F400000000000007708000000010000000078"/>
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.7/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.9/@inputConnector"/>
+          </outputConnector>
+          <scriptStaticKey prettyName="Script Key" keyName="key" keyValue="/default/key" filters="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F400000000000007708000000010000000078"/>
+        </children>
+        <children xsi:type="esb:SwitchMediator">
+          <sourceXpath propertyValue="//in:MediaInRequest/endTimestamp" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+          <caseBranches caseRegex="^$">
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.9/@switchContainer/@switchCaseContainer.0/@mediatorFlow/@children.0/@inputConnector"/>
+          </caseBranches>
+          <caseBranches caseRegex="^.*endTimestamp.*$">
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.9/@switchContainer/@switchCaseContainer.1/@mediatorFlow/@children.0/@inputConnector"/>
+          </caseBranches>
+          <defaultBranch>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.9/@switchContainer/@switchDefaultContainer/@mediatorFlow/@children.0/@inputConnector"/>
+          </defaultBranch>
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.8/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.10/@inputConnector"/>
+          </outputConnector>
+          <switchContainer>
+            <switchCaseContainer>
+              <mediatorFlow>
+                <children xsi:type="esb:PropertyMediator" propertyName="uri.var.endTimestamp" valueType="EXPRESSION">
+                  <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.9/@caseBranches.0/@outgoingLink"/>
+                  <outputConnector>
+                    <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.9/@switchContainer/@switchCaseContainer.0/@mediatorFlow/@children.1/@inputConnector"/>
+                  </outputConnector>
+                  <valueExpression propertyValue="get-property('sysdate')" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+                </children>
+                <children xsi:type="esb:PropertyMediator" propertyName="uri.var.startTimestamp" valueType="EXPRESSION">
+                  <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.9/@switchContainer/@switchCaseContainer.0/@mediatorFlow/@children.0/@outputConnector/@outgoingLink"/>
+                  <outputConnector/>
+                  <valueExpression propertyValue="fn:concat(get-property('startDate'), 'T00:00:00.000Z')" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+                </children>
+              </mediatorFlow>
+            </switchCaseContainer>
+            <switchCaseContainer>
+              <mediatorFlow>
+                <children xsi:type="esb:PropertyMediator" propertyName="uri.var.endTimestamp" valueType="EXPRESSION">
+                  <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.9/@caseBranches.1/@outgoingLink"/>
+                  <outputConnector>
+                    <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.9/@switchContainer/@switchCaseContainer.1/@mediatorFlow/@children.1/@inputConnector"/>
+                  </outputConnector>
+                  <valueExpression propertyValue="get-property('sysdate')" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+                </children>
+                <children xsi:type="esb:PropertyMediator" propertyName="uri.var.startTimestamp" valueType="EXPRESSION">
+                  <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.9/@switchContainer/@switchCaseContainer.1/@mediatorFlow/@children.0/@outputConnector/@outgoingLink"/>
+                  <outputConnector/>
+                  <valueExpression propertyValue="fn:concat(get-property('startDate'), 'T00:00:00.000Z')" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+                </children>
+              </mediatorFlow>
+            </switchCaseContainer>
+            <switchDefaultContainer>
+              <mediatorFlow>
+                <children xsi:type="esb:PropertyMediator" propertyName="uri.var.endTimestamp" valueType="EXPRESSION">
+                  <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.9/@defaultBranch/@outgoingLink"/>
+                  <outputConnector>
+                    <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.9/@switchContainer/@switchDefaultContainer/@mediatorFlow/@children.1/@inputConnector"/>
+                  </outputConnector>
+                  <valueExpression propertyValue="//in:MediaInRequest/endTimestamp" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+                </children>
+                <children xsi:type="esb:PropertyMediator" propertyName="uri.var.startTimestamp" valueType="EXPRESSION">
+                  <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.9/@switchContainer/@switchDefaultContainer/@mediatorFlow/@children.0/@outputConnector/@outgoingLink"/>
+                  <outputConnector/>
+                  <valueExpression propertyValue="//in:MediaInRequest/startTimestamp" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000001770800000002000000027400026E7374001D687474703A2F2F6F72672E6170616368652E73796E617073652F787364740002696E740037687474703A2F2F736572766963652E736B7974762E636F2E6E7A2F6D70782D6D656469612D726571756573742D736572766963652F763178"/>
+                </children>
+              </mediatorFlow>
+            </switchDefaultContainer>
+          </switchContainer>
+        </children>
+        <children xsi:type="esb:PropertyMediator" propertyName="HTTP_METHOD" propertyScope="axis2" valueLiteral="GET">
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.9/@outputConnector/@outgoingLink"/>
+          <outputConnector>
+            <outgoingLink target="//@server/@children.0/@mediatorFlow/@children.12/@inputConnector"/>
+          </outputConnector>
+          <valueExpression prettyName="Property Expression" propertyName="expression" propertyValue="/default/expression" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F400000000000007708000000010000000078"/>
+        </children>
+        <children xsi:type="esb:SendMediator">
+          <InputConnector/>
+          <OutputConnector>
+            <outgoingLink target="//@server/@children.0/@inputConnector"/>
+          </OutputConnector>
+          <StaticReceivingSequence prettyName="Static" keyName="receive" keyValue="/default/sequence" filters="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F400000000000007708000000010000000078"/>
+          <DynamicReceivingSequence prettyName="Dynamic" propertyName="receive" propertyValue="/default/xpath" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F400000000000007708000000010000000078"/>
+        </children>
+        <children xsi:type="esb:NamedEndpoint" reversed="true" name="MPXMediaRequestReSTEndpoint">
+          <reliableMessagingPolicy prettyName="ReliableMessagingPolicy Key" keyName="ReliableMessagingPolicy Key" keyValue="/default/key" filters="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F400000000000007708000000010000000078"/>
+          <securityPolicy prettyName="SecurityPolicy Key" keyName="SecurityPolicy Key" keyValue="/default/key" filters="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F400000000000007708000000010000000078"/>
+          <inputConnector incomingLinks="//@server/@children.0/@mediatorFlow/@children.10/@outputConnector/@outgoingLink"/>
+          <dynamicReferenceKey prettyName="Endpoint Expression" propertyName="expression" propertyValue="/default/expression" namespaces="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F400000000000007708000000010000000078"/>
+          <staticReferenceKey prettyName="Endpoint Key" keyName="Endpoint Key" keyValue="MPXMediaRequestReSTEndpoint" filters="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F400000000000007708000000010000000078"/>
+        </children>
+      </mediatorFlow>
+      <onError prettyName="OnError sequence Key" keyName="OnError sequence Key" filters="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F400000000000007708000000010000000078"/>
+    </children>
+  </server>
+</esb:EsbDiagram>

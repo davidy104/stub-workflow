@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="MPXAuthenticationInSequence" groupId="co.nz.skytv.MPXReportingESBProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/MPXAuthenticationInSequence.xml</file>
+    </artifact>
+    <artifact name="MPXAuthenticationOutSequence" groupId="co.nz.skytv.MPXReportingESBProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/MPXAuthenticationOutSequence.xml</file>
+    </artifact>
+    <artifact name="MPXAuthenticationService" groupId="co.nz.skytv.MPXReportingESBProject.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/MPXAuthenticationService.xml</file>
+    </artifact>
+    <artifact name="MPXAuthHTTPEndpoint" groupId="co.nz.skytv.MPXReportingESBProject.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/MPXAuthHTTPEndpoint.xml</file>
+    </artifact>
+    <artifact name="MPXMediaFileReSTEndpoint" groupId="co.nz.skytv.MPXReportingESBProject.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/MPXMediaFileReSTEndpoint.xml</file>
+    </artifact>
+    <artifact name="MPXMediaRequestReSTEndpoint" groupId="co.nz.skytv.MPXReportingESBProject.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/MPXMediaRequestReSTEndpoint.xml</file>
+    </artifact>
+    <artifact name="MPXMediaFileInSequence" groupId="co.nz.skytv.MPXReportingESBProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/MPXMediaFileInSequence.xml</file>
+    </artifact>
+    <artifact name="MPXMediaRequestInSequence" groupId="co.nz.skytv.MPXReportingESBProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/MPXMediaRequestInSequence.xml</file>
+    </artifact>
+    <artifact name="MPXThePlatformDataEndpoint" groupId="co.nz.skytv.MPXReportingESBProject.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/MPXThePlatformDataEndpoint.xml</file>
+    </artifact>
+    <artifact name="MPXMediaFileReSTService" groupId="co.nz.skytv.MPXReportingESBProject.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/MPXMediaFileReSTService.xml</file>
+    </artifact>
+    <artifact name="MPXMediaRequestReSTService" groupId="co.nz.skytv.MPXReportingESBProject.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/MPXMediaRequestReSTService.xml</file>
+    </artifact>
+    <artifact name="MPXReportingService" groupId="co.nz.skytv.MPXReportingESBProject.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/MPXReportingService.xml</file>
+    </artifact>
+    <artifact name="FaultHandler" groupId="co.nz.skytv.MPXReportingESBProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/FaultHandler.xml</file>
+    </artifact>
+    <artifact name="MPXReportingScheduler" groupId="co.nz.skytv.MPXReportingESBProject.task" version="1.0.0" type="synapse/task" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/tasks/MPXReportingScheduler.xml</file>
+    </artifact>
+</artifacts>

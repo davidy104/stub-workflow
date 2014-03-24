@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/sequences
+END
+FaultHandler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/sequences/FaultHandler.xml
+END
+MPXMediaFileInSequence.xml
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/sequences/MPXMediaFileInSequence.xml
+END
+MPXAuthenticationOutSequence.xml
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/sequences/MPXAuthenticationOutSequence.xml
+END
+MPXAuthenticationInSequence.xml
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/sequences/MPXAuthenticationInSequence.xml
+END
+MPXMediaRequestInSequence.xml
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/sequences/MPXMediaRequestInSequence.xml
+END

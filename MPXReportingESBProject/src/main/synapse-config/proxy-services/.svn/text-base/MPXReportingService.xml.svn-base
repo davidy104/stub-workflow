@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="MPXReportingService" transports="https http" startOnLoad="true" trace="disable">
+    <target>
+        <inSequence>
+            <log level="full"/>
+            <conditionalRouter continueAfter="false">
+                <conditionalRoute breakRoute="false">
+                    <condition>
+                        <match type="header" source="SOAPAction" regex="^.*http://service.skytv.co.nz/getMediaFile.*$"/>
+                    </condition>
+                    <target sequence="MPXMediaFileInSequence"/>
+                </conditionalRoute>
+                <conditionalRoute breakRoute="false">
+                    <condition>
+                        <match type="header" source="SOAPAction" regex="^.*http://service.skytv.co.nz/getMediaRequest.*$"/>
+                    </condition>
+                    <target sequence="MPXMediaRequestInSequence"/>
+                </conditionalRoute>
+            </conditionalRouter>
+        </inSequence>
+        <outSequence>
+        	<send />
+        </outSequence>
+        <faultSequence/>
+    </target>
+    <publishWSDL key="gov:/repository/components/mpxreporting/MPXReporting.wsdl"/>
+</proxy>

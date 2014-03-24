@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/graphical-synapse-config/proxy-services
+END
+proxy_MPXReportingService.esb
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/graphical-synapse-config/proxy-services/proxy_MPXReportingService.esb
+END
+proxy_MPXAuthenticationService.esb_diagram
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/graphical-synapse-config/proxy-services/proxy_MPXAuthenticationService.esb_diagram
+END
+proxy_MPXReportingService.esb_diagram
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/graphical-synapse-config/proxy-services/proxy_MPXReportingService.esb_diagram
+END
+proxy_MPXMediaRequestReSTService.esb
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/graphical-synapse-config/proxy-services/proxy_MPXMediaRequestReSTService.esb
+END
+proxy_MPXMediaFileReSTService.esb
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/graphical-synapse-config/proxy-services/proxy_MPXMediaFileReSTService.esb
+END
+proxy_MPXMediaRequestReSTService.esb_diagram
+K 25
+svn:wc:ra_dav:version-url
+V 196
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/graphical-synapse-config/proxy-services/proxy_MPXMediaRequestReSTService.esb_diagram
+END
+proxy_MPXMediaFileReSTService.esb_diagram
+K 25
+svn:wc:ra_dav:version-url
+V 193
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/graphical-synapse-config/proxy-services/proxy_MPXMediaFileReSTService.esb_diagram
+END
+proxy_MPXAuthenticationService.esb
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/graphical-synapse-config/proxy-services/proxy_MPXAuthenticationService.esb
+END

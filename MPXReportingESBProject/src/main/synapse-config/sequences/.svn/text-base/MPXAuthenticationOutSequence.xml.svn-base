@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="MPXAuthenticationOutSequence">
+    <property name="messageType" value="application/xml" scope="axis2" type="STRING"/>
+    <property name="contentType" value="application/xml" scope="axis2" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" name="uri.var.token" expression="//signInResponse/token" scope="default" type="STRING"/>
+    <payloadFactory>
+        <format>
+            <m:SignInResponse xmlns:m="http://service.skytv.co.nz/mpx-authentication-service/v1">
+                <userName xmlns="">$1</userName>
+                <token xmlns="">$2</token>
+            </m:SignInResponse>
+        </format>
+        <args>
+            <arg xmlns:ns="http://org.apache.synapse/xsd" expression="//signInResponse/userName"/>
+            <arg xmlns:ns="http://org.apache.synapse/xsd" expression="//signInResponse/token"/>
+        </args>
+    </payloadFactory>
+</sequence>

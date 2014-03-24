@@ -1,0 +1,12 @@
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="MPXMediaFileReSTEndpoint">
+   <http uri-template="https://localhost:8243/services/MPXMediaFileReSTService/MediaFile?schema={uri.var.schema}&amp;csv={uri.var.csv}&amp;fields=title,filepath,mediaid,format&amp;token={uri.var.token}&amp;byExists=TRUE&amp;byFormat=F4M|M3U&amp;range=1-100000" method="get">
+      <suspendOnFailure>
+         <progressionFactor>1.0</progressionFactor>
+      </suspendOnFailure>
+      <markForSuspension>
+         <retriesBeforeSuspension>0</retriesBeforeSuspension>
+         <retryDelay>0</retryDelay>
+      </markForSuspension>
+   </http>
+</endpoint>
+                        

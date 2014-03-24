@@ -6,4 +6,11 @@
             <mediaType>application/vnd+wso2.smooks</mediaType>
         </item>
     </artifact>
+    <artifact name="mpxtransform" groupId="co.nz.skytv.StubAssetRegisterResource.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>mpxtransform.wsdl</file>
+            <path>/_system/governance/wsdl</path>
+            <mediaType>application/wsdl+xml</mediaType>
+        </item>
+    </artifact>
 </artifacts>

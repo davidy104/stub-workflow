@@ -5,4 +5,7 @@
     <artifact name="MpxTransformProxy" groupId="co.nz.skytv.StubAssetSynapse.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/proxy-services/MpxTransformProxy.xml</file>
     </artifact>
+    <artifact name="TransformProxy" groupId="co.nz.skytv.StubAssetSynapse.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/TransformProxy.xml</file>
+    </artifact>
 </artifacts>

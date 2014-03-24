@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="MPXMediaRequestReSTService" transports="https http" startOnLoad="true" trace="disable">
+    <target faultSequence="FaultHandler">
+        <endpoint key="MPXThePlatformDataEndpoint"/>
+        <inSequence/>
+        <outSequence>
+            <xslt key="gov:/repository/components/mpxreporting/media-request-transform.xslt"/>
+            <send/>
+        </outSequence>
+    </target>
+</proxy>

@@ -1,0 +1,11 @@
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="MPXAuthHTTPEndpoint">
+    <http uri-template="https://identity.auth.theplatform.com/idm/web/Authentication/signIn?schema=1.0&amp;_duration=86400000&amp;_idleTimeout=14400000&amp;username={uri.var.username}&amp;password={uri.var.password}&amp;form=json" method="get">
+      <suspendOnFailure>
+         <progressionFactor>1.0</progressionFactor>
+      </suspendOnFailure>
+      <markForSuspension>
+         <retriesBeforeSuspension>0</retriesBeforeSuspension>
+         <retryDelay>0</retryDelay>
+      </markForSuspension>
+   </http>
+</endpoint>

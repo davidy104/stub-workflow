@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_swZf8GXxEeOgx-rWREhRBA" type="Esb" name="task_MPXReportingScheduler.esb_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_szhFYGXxEeOgx-rWREhRBA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_szhFZWXxEeOgx-rWREhRBA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_rlxkUHjTEeO1io23ONRsgw" type="3667">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_rlxkUXjTEeO1io23ONRsgw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_rlxkUnjTEeO1io23ONRsgw" fontName="Ubuntu"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_rlxkU3jTEeO1io23ONRsgw"/>
+        <element xmi:type="esb:Task" href="task_MPXReportingScheduler.esb#//@server/@children.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rlxkVHjTEeO1io23ONRsgw" width="75" height="55"/>
+      </children>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_szhFYWXxEeOgx-rWREhRBA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_szhFYmXxEeOgx-rWREhRBA" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_szhFY2XxEeOgx-rWREhRBA"/>
+    <element xmi:type="esb:EsbServer" href="task_MPXReportingScheduler.esb#//@server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_szhFZGXxEeOgx-rWREhRBA"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_swZf8WXxEeOgx-rWREhRBA"/>
+  <element xmi:type="esb:EsbDiagram" href="task_MPXReportingScheduler.esb#/"/>
+</notation:Diagram>

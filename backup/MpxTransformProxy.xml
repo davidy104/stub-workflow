@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="MpxTransformProxy" transports="http https" startOnLoad="true" trace="disable">
+    <target>
+        <inSequence>
+            <payloadFactory media-type="xml" description="InputPayloadFactory">
+                <format>
+                    <ns1:TransformRequest xmlns:ns1="http://service.skytv.co.nz/puborch-transform/v1" xmlns:ns2="http://model.skytv.co.nz/vod/v1">
+                        <fromType>$1</fromType>
+                        <toType>$2</toType>
+                        <source>
+                            <ns2:Title>
+                                <ns2:titleId>$3</ns2:titleId>
+                                <ns2:seriesNumber>$4</ns2:seriesNumber>
+                            </ns2:Title>
+                        </source>
+                    </ns1:TransformRequest>
+                </format>
+                <args>
+                    <arg xmlns:ns2="http://model.skytv.co.nz/vod/v1" xmlns:ns1="http://service.skytv.co.nz/puborch-transform/v1" evaluator="xml" expression="//ns1:TransformRequest/fromType"/>
+                    <arg xmlns:ns2="http://model.skytv.co.nz/vod/v1" xmlns:ns1="http://service.skytv.co.nz/puborch-transform/v1" evaluator="xml" expression="//ns1:TransformRequest/toType"/>
+                    <arg xmlns:ns2="http://model.skytv.co.nz/vod/v1" xmlns:ns1="http://service.skytv.co.nz/puborch-transform/v1" evaluator="xml" expression="//ns1:TransformRequest/source/ns2:Title/ns2:titleId"/>
+                    <arg xmlns:ns2="http://model.skytv.co.nz/vod/v1" xmlns:ns1="http://service.skytv.co.nz/puborch-transform/v1" evaluator="xml" expression="//ns1:TransformRequest/source/ns2:Title/ns2:seriesNumber"/>
+                </args>
+            </payloadFactory>
+            <log level="full" description="log:beforeTransform"/>
+            <smooks config-key="gov:smooks/StubMpxTransformSmooksResource.xml" description="transform">
+                <input type="xml"/>
+                <output type="xml"/>
+            </smooks>
+            <log level="full" description="log:afterTransform"/>
+            <header name="To" scope="default" action="remove"/>
+            <property name="RESPONSE" value="true" scope="default" type="STRING"/>
+            <property name="NO_ENTITY_BODY" scope="axis2" action="remove"/>
+            <send/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+</proxy>

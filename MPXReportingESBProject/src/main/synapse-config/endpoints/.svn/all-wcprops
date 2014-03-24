@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/endpoints
+END
+MPXMediaRequestReSTEndpoint.xml
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/endpoints/MPXMediaRequestReSTEndpoint.xml
+END
+MPXAuthHTTPEndpoint.xml
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/endpoints/MPXAuthHTTPEndpoint.xml
+END
+MPXThePlatformDataEndpoint.xml
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/sky/!svn/ver/36794/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/endpoints/MPXThePlatformDataEndpoint.xml
+END
+MPXMediaFileReSTEndpoint.xml
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/sky/!svn/ver/37260/trunk/MPXReporting/MPXReportingCarbonApplicationProject/MPXReportingESBProject/src/main/synapse-config/endpoints/MPXMediaFileReSTEndpoint.xml
+END

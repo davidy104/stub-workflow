@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="MPXMediaFileInSequence">
+    <log level="full"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-media-file-request-service/v1" name="uri.var.token" expression="//in:MediaFileInRequest/token" scope="default" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-media-file-request-service/v1" name="uri.var.schema" expression="//in:MediaFileInRequest/schema" scope="default" type="STRING"/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:in="http://service.skytv.co.nz/mpx-media-file-request-service/v1" name="uri.var.csv" expression="//in:MediaFileInRequest/csv" scope="default" type="STRING"/>
+    <property name="HTTP_METHOD" value="GET" scope="axis2" type="STRING"/>
+    <send>
+        <endpoint key="MPXMediaFileReSTEndpoint"/>
+    </send>
+</sequence>

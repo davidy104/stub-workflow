@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="MPXAuthenticationService" transports="https http" startOnLoad="true" trace="disable">
+    <target faultSequence="FaultHandler">
+        <inSequence>
+            <log level="full"/>
+            <sequence key="MPXAuthenticationInSequence"/>
+            <send>
+                <endpoint key="MPXAuthHTTPEndpoint"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log level="full"/>
+            <sequence key="MPXAuthenticationOutSequence"/>
+            <send/>
+        </outSequence>
+    </target>
+    <publishWSDL key="gov:/repository/components/mpxreporting/MPX-Authentication.wsdl"/>
+    <parameter name="disableSOAP12">true</parameter>
+</proxy>

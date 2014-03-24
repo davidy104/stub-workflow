@@ -1,0 +1,16 @@
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="MPXMediaRequestReSTEndpoint">
+   <http uri-template="https://localhost:8243/services/MPXMediaRequestReSTService/MediaRequest?csv={uri.var.csv}&amp;range={uri.var.rangeStart}-{uri.var.rangeEnd}&amp;byTimestamp={uri.var.startTimestamp}&#126;{uri.var.endTimestamp}&amp;schema={uri.var.schema}&amp;fields=adPolicy,adPolicyId,affiliate,assetTypes,author,bitrate,bitrateInKbps,browser,categories,contentType,country,delivery,dateOnly,dayOfWeek,domain,duration,feed,fileSize,format,hour,language,mediaId,month,operatingSystem,owner,ownerId,player,provider,providerId,region,requestCount,server,serverId,timestamp,title,transform,userName&amp;token={uri.var.token}" method="get">
+      <suspendOnFailure>
+         <progressionFactor>1.0</progressionFactor>
+      </suspendOnFailure>
+      <markForSuspension>
+         <retriesBeforeSuspension>0</retriesBeforeSuspension>
+         <retryDelay>0</retryDelay>
+      </markForSuspension>
+      <timeout>
+         <duration>300000</duration>
+         <responseAction>discard</responseAction>
+      </timeout>
+   </http>
+</endpoint>
+                        
